@@ -1,6 +1,6 @@
-var WSP = /[\t\n\f ]/;
-var ALPHA = /[A-Za-z]/;
-var CRLF = /\r\n?/g;
+const WSP = /[\t\n\f ]/;
+const ALPHA = /[A-Za-z]/;
+const CRLF = /\r\n?/g;
 
 export function isSpace(char: string): boolean {
   return WSP.test(char);
@@ -19,7 +19,7 @@ export type Option<T> = T | null;
 export type Maybe<T> = Option<T> | null;
 
 export function unwrap<T>(maybe: Maybe<T>, msg?: string): T {
-  if (!maybe) throw new Error(`${msg || 'value'} was null`);
+  if (!maybe) throw new Error(`${msg || "value"} was null`);
   return maybe;
 }
 
