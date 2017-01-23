@@ -11,30 +11,29 @@
     "type": "git",
     "url": "https://github.com/tildeio/simple-html-tokenizer.git"
   },
-  "main": "dist/simple-html-tokenizer.js",
-  "jsnext:main": "dist/es6/index.js",
+  "main": "dist/es5/simple-html-tokenizer.js",
+  "jsnext:main": "dist/es6/simple-html-tokenizer/index.js",
+  "typings": "src/index.d.ts",
   "scripts": {
-    "build": "ember build",
-    "prepublish": "npm run build",
-    "test": "ember test",
-    "lint": "ember test -f jshint"
+    "test": "testem ci",
+    "lint": "jshint bin lib test"
   },
   "devDependencies": {
-    "broccoli-concat": "^3.0.5",
-    "broccoli-funnel": "^1.1.0",
-    "broccoli-jshint": "^2.1.0",
-    "broccoli-merge-trees": "^1.2.1",
-    "broccoli-rollup": "^1.0.3",
-    "broccoli-tslinter": "^2.0.0",
-    "broccoli-typescript-compiler": "^1.0.1",
-    "ember-cli": "^2.10.0",
-    "qunitjs": "^1.18.0",
-    "tslint": "^4.3.1",
-    "typescript": "^2.1.4"
-  },
-  "ember-addon": {
-    "paths": [
-      "commands"
-    ]
+    "bower": "^1.7.9",
+    "ember-cli": "^2.5.0",
+    "broccoli-concat": "^2.2.0",
+    "broccoli-funnel": "^1.0.1",
+    "broccoli-merge-trees": "^1.1.1",
+    "broccoli-stew": "^1.2.0",
+    "broccoli-babel-transpiler": "^5.5.0",
+    "broccoli-typescript-compiler": "^0.6.0",
+    "typescript": "next",
+    "tslint": "next",
+    "jshint": "^2.9.2",
+    "qunit-extras": "^1.4.2",
+    "loader.js": "^4.0.4",
+    "qunit": "^0.9.1",
+    "broccoli-rollup": "^0.0.4",
+    "testem": "^1.7.1"
   }
 }
