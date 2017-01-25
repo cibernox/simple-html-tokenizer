@@ -1,6 +1,6 @@
-let WSP = /[\t\n\f ]/;
-let ALPHA = /[A-Za-z]/;
-let CRLF = /\r\n?/g;
+const WSP = /[\t\n\f ]/;
+const ALPHA = /[A-Za-z]/;
+const CRLF = /\r\n?/g;
 
 export function isSpace(char: string): boolean {
   return WSP.test(char);
